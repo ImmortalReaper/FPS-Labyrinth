@@ -57,7 +57,7 @@ namespace FPSLabyrinth.Player
                 menuUI.GameplayUI.SetFlashlightBattery(flashlightBattery, batteryMaxAmount);
                 if (flashlightBattery <= 0) { LowBattery(); }
             }
-            else
+            else if (flashlightBattery < batteryMaxAmount)
             {
                 // Recharge battery when the flashlight is off
                 flashlightBattery += Time.deltaTime * rechargeInSecond;
