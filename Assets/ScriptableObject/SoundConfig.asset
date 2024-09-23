@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aba4b929a7f20548996f37a43089e19, type: 3}
+  m_Name: SoundConfig
+  m_EditorClassIdentifier: 
+  pickUpKeySound: {fileID: 8300000, guid: 68888c2deccd69c43b7970043f73c5bf, type: 3}
+  unlockLockSound: {fileID: 8300000, guid: a2b974c5fa993a94b8a3ba9a3af2762e, type: 3}
+  doorOpenSound: {fileID: 8300000, guid: 412a61fb821f4bd4aad9cc01e2106a12, type: 3}
+  footstepSound: {fileID: 8300000, guid: 7e1f778ad4c7f644fa15a1485d0093a3, type: 3}
+  monsterRoarSound: {fileID: 8300000, guid: 0cccdfb2b618cae4c91e068f27c9da27, type: 3}
+  playerHitSound: {fileID: 8300000, guid: fbd06f61678f3d741bd77264ba9c9238, type: 3}
