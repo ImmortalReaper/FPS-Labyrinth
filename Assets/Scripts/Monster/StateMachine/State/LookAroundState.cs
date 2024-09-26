@@ -9,6 +9,7 @@ namespace FPSLabyrinth.Monster.StateMachine.State
         private float speed = 0; // Speed of the monster while looking around (usually stationary)
         private float transitionSpeed = 3.0f; // Speed of blending the animation
         private float blendState = 0f; // Blend state for the animation
+        private string blend = "Blend";
 
         public LookAroundState(Monster monster) : base(monster) {}
 
@@ -22,7 +23,7 @@ namespace FPSLabyrinth.Monster.StateMachine.State
         public override void UpdateState()
         {
             lookTime += Time.deltaTime; // Increment look time
-            ChangeSpeed("Blend", blendState, speed, transitionSpeed); // Update animation blend
+            ChangeSpeed(blend, blendState, speed, transitionSpeed); // Update animation blend
             SwitchState();// Check for state transitions
         }
 

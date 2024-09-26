@@ -7,6 +7,7 @@ namespace FPSLabyrinth.Monster.StateMachine.State
         private Vector3 targetPosition; // The target position the monster will move towards
         private float transitionSpeed = 1.0f; // Speed of blending animation
         private float blendState = 0.5f; // Blend state for the animation
+        private string blend = "Blend";
     
         public WalkState(Monster monster) : base(monster) {}
 
@@ -29,7 +30,7 @@ namespace FPSLabyrinth.Monster.StateMachine.State
                 }
             }
             // Update the monster's animation blend and speed
-            ChangeSpeed("Blend", blendState, monster.WalkSpeed, transitionSpeed);
+            ChangeSpeed(blend, blendState, monster.WalkSpeed, transitionSpeed);
             // Check for state transitions
             SwitchState();
         }
