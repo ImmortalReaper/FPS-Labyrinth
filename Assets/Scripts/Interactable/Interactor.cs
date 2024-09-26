@@ -18,6 +18,8 @@ namespace FPSLabyrinth.Interactable
         [SerializeField] private InputActionReference interactAction;
         // Reference to the player performing the interaction
         [SerializeField] private Player.Player player;
+        // Specifies which layers the object can interact with.
+        [SerializeField] private LayerMask interactLayers;
     
         // Reference to the main camera for casting rays to detect interactable objects
         private Camera mainCamera;
@@ -54,7 +56,7 @@ namespace FPSLabyrinth.Interactable
             Interactable interactable = null;
             IInteractable interactableObject = null;
             // Checks if the ray hits an object within the player's reach
-            if (Physics.Raycast(ray, out RaycastHit hit, playerReachDistance))
+            if (Physics.Raycast(ray, out RaycastHit hit, playerReachDistance, interactLayers))
             {
                 // Gets the Interactable and IInteractable components from the hit object
                 interactable = hit.collider.GetComponent<Interactable>();
